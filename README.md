@@ -40,16 +40,27 @@ The /api-key{} can appear anywhere in the URI, it is stripped out once the
 API Key (uuid) has been extracted.
 
 List all contacts
+
 URL: https://<your domain>/app/api/contacts/api-key{<uuid>}
+
 Request Method: GET
+
+
 
 List all numbers for a contact
+
 URL: https://<your domain>/app/api/contact{<contact uuid>}/numbers/api-key{<uuid>}
+
 Request Method: GET
 
+
+
 Add a contact number
+
 URL: https://<your domain>/app/api/contact{<contact uuid>}/number/api-key{<uuid>}
+
 Request Method: POST
+
 Body raw data:
 {
 	"phone_type_voice":"1",
@@ -64,9 +75,14 @@ Body raw data:
 	"phone_description":"Data Centre"
 }
 
+
+
 Update a contact number
+
 URL: https://<your domain>/app/api/contact{<contact uuid>}/number{<number uuid>}/api-key{<uuid>}
+
 Request Method: PUT
+
 Body raw data:
 {
 	"phone_type_voice":"1",
@@ -81,9 +97,15 @@ Body raw data:
 	"phone_description":"Main Office"
 }
 
+
+
 Delete a contact number
+
 URL: https://<your domain>/app/api/contact{<contact uuid>}/number{<number uuid>}/api-key{<uuid>}
+
 Request Method: DELETE
+
+
 
 A note on the rest_api app.  There is an option to make the API global, this is achieved by 
 setting the domain_uuid field to null.  Maybe I'm missing something or there is a limitation in 
@@ -91,6 +113,7 @@ the database class, but if the domain_uuid is null the normal delete functions d
 order to delete a record you must first meake it non global and then delete it.
 
 I think, that's about it.
+
     Adrian Fretwell.
 
 
