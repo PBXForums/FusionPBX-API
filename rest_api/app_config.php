@@ -1,0 +1,113 @@
+<?php
+
+	//application details
+		$apps[$x]['name'] = "RestAPI";
+		$apps[$x]['uuid'] = "41669f92-ed54-4851-8b98-e244fa71f38c";
+		$apps[$x]['category'] = "";
+		$apps[$x]['subcategory'] = "";
+		$apps[$x]['version'] = "1.0";
+		$apps[$x]['license'] = "Mozilla Public License 1.1";
+		$apps[$x]['url'] = "http://www.fusionpbx.com";
+		$apps[$x]['description']['en-us'] = "REST API";
+		$apps[$x]['description']['ar-eg'] = "";
+		$apps[$x]['description']['de-at'] = "";
+		$apps[$x]['description']['de-ch'] = "";
+		$apps[$x]['description']['de-de'] = "";
+		$apps[$x]['description']['es-cl'] = "";
+		$apps[$x]['description']['es-mx'] = "";
+		$apps[$x]['description']['fr-ca'] = "";
+		$apps[$x]['description']['fr-fr'] = "";
+		$apps[$x]['description']['he-il'] = "";
+		$apps[$x]['description']['it-it'] = "";
+		$apps[$x]['description']['nl-nl'] = "";
+		$apps[$x]['description']['pl-pl'] = "";
+		$apps[$x]['description']['pt-br'] = "";
+		$apps[$x]['description']['pt-pt'] = "";
+		$apps[$x]['description']['ro-ro'] = "";
+		$apps[$x]['description']['ru-ru'] = "";
+		$apps[$x]['description']['sv-se'] = "";
+		$apps[$x]['description']['uk-ua'] = "";
+
+	//permission details
+		$y=0;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_c";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$apps[$x]['permissions'][$y]['groups'][] = "rest_api";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_r";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$apps[$x]['permissions'][$y]['groups'][] = "rest_api";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_u";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$apps[$x]['permissions'][$y]['groups'][] = "rest_api";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_d";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$apps[$x]['permissions'][$y]['groups'][] = "rest_api";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_view";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_add";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_edit";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_delete";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+		$y++;
+		$apps[$x]['permissions'][$y]['name'] = "restapi_all";
+		$apps[$x]['permissions'][$y]['groups'][] = "superadmin";
+
+	//schema details
+		$y=0;
+		$apps[$x]['db'][$y]['table']['name'] = "v_restapi";
+		$apps[$x]['db'][$y]['table']['parent'] = "";
+		$z=0;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "restapi_uuid";
+		$apps[$x]['db'][$y]['fields'][$z]['type']['pgsql'] = "uuid";
+		$apps[$x]['db'][$y]['fields'][$z]['type']['sqlite'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['type']['mysql'] = "char(36)";
+		$apps[$x]['db'][$y]['fields'][$z]['key']['type'] = "primary";
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = 'domain_uuid';
+		$apps[$x]['db'][$y]['fields'][$z]['type']['pgsql'] = 'uuid';
+		$apps[$x]['db'][$y]['fields'][$z]['type']['sqlite'] = 'text';
+		$apps[$x]['db'][$y]['fields'][$z]['type']['mysql'] = 'char(36)';
+		$apps[$x]['db'][$y]['fields'][$z]['key']['type'] = 'foreign';
+		$apps[$x]['db'][$y]['fields'][$z]['key']['reference']['table'] = 'v_domains';
+		$apps[$x]['db'][$y]['fields'][$z]['key']['reference']['field'] = 'domain_uuid';
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "api_name";
+		$apps[$x]['db'][$y]['fields'][$z]['type'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['description']['en-us'] = "The subject the API call relates to.";
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "api_category";
+		$apps[$x]['db'][$y]['fields'][$z]['type'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['description']['en-us'] = "The subject the API call relates to.";
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "api_method";
+		$apps[$x]['db'][$y]['fields'][$z]['type'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['description']['en-us'] = "The HTTP Method: GET, POST, PUT, DELETE.";
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "api_uri";
+		$apps[$x]['db'][$y]['fields'][$z]['type'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['description']['en-us'] = "The expected query string: /contact{}/address";
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "api_sql";
+		$apps[$x]['db'][$y]['fields'][$z]['type'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['description']['en-us'] = "The database query to execute.";
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "api_enabled";
+		$apps[$x]['db'][$y]['fields'][$z]['type'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['description']['en-us'] = "";
+		$z++;
+		$apps[$x]['db'][$y]['fields'][$z]['name'] = "api_description";
+		$apps[$x]['db'][$y]['fields'][$z]['type'] = "text";
+		$apps[$x]['db'][$y]['fields'][$z]['description']['en-us'] = "";
+		$z++;
+
+
+?>
