@@ -1,28 +1,28 @@
 <?php
 /*
- FusionPBX
- Version: MPL 1.1
+	PBXForums FusionPBX-API
+	Version: MPL 1.1
 
- The contents of this file are subject to the Mozilla Public License Version
- 1.1 (the "License"); you may not use this file except in compliance with
- the License. You may obtain a copy of the License at
- http://www.mozilla.org/MPL/
+	The contents of this file are subject to the Mozilla Public License Version
+	1.1 (the "License"); you may not use this file except in compliance with
+	the License. You may obtain a copy of the License at
+	http://www.mozilla.org/MPL/
 
- Software distributed under the License is distributed on an "AS IS" basis,
- WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- for the specific language governing rights and limitations under the
- License.
+	Software distributed under the License is distributed on an "AS IS" basis,
+	WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+	for the specific language governing rights and limitations under the
+	License.
 
- The Original Code is FusionPBX
+	This is an unofficial FusionPBX application, its purpose is to provide an
+	educational resource for anyone wishing to better understand the building
+	of REST API transactions.
 
- The Initial Developer of the Original Code is
- Mark J Crane <markjcrane@fusionpbx.com>
- Portions created by the Initial Developer are Copyright (C) 2008-2019
- the Initial Developer. All Rights Reserved.
+	The code presented here is inspired by the original code at FusionPBX and
+	credit must be given to: Mark J Crane <markjcrane@fusionpbx.com>
+	for that original work.
 
- Contributor(s):
- Mark J Crane <markjcrane@fusionpbx.com>
- Adrian Fretwell <adrian@a2es.co.uk>
+	Contributor(s):
+	Adrian Fretwell <adrian@a2es.co.uk>
 */
 
 //define the rest_api class
